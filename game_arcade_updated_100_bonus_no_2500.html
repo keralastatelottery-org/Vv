@@ -82,7 +82,7 @@ async function loadSheet(){
 function setupFilters(){
  const select=$("#category"), selected=select.value;
  const cats=[...new Set(games.map(g=>String(g.category||"game").toLowerCase()))].sort();
- select.innerHTML='<option value="all">All categories</option>'+cats.map(c=>'<option value="'+esc(c)+'">'+esc(c.replace(/[-_]/g," "))+'</option>').join("");
+ select.innerHTML='<option value="all">Hot Gmae </option>'+cats.map(c=>'<option value="'+esc(c)+'">'+esc(c.replace(/[-_]/g," "))+'</option>').join("");
  select.value=cats.includes(selected)?selected:"all";
 }
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
